@@ -3,4 +3,14 @@
 type Query {
     me: User
     test: User
+    users(sorting: Sorting): [User]
+}
+
+type Sorting {
+    direction: SortingDirection
+}
+
+enum SortingDirection {
+    ASC
+    DESC
 }
